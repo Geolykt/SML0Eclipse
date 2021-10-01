@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type base-type="org.eclipse.core.runtime.text" file-extensions="accesswidener" id="de.geolykt.sml0.eclipse.aw.accesswidener" name="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.editors">
+    <editorContentTypeBinding contentTypeId="de.geolykt.sml0.eclipse.aw.accesswidener" editorId="org.eclipse.ui.genericeditor.GenericEditor" />
+  </extension>
+  <extension point="org.eclipse.ui.genericeditor.presentationReconcilers">
+    <presentationReconciler class="de.geolykt.sml0.eclipse.aw.AccesswidenerPresentationReconciler" contentType="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.genericeditor.hoverProviders">
+    <hoverProvider class="de.geolykt.sml0.eclipse.aw.AccesswidenerHoverProvider" contentType="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.genericeditor.contentAssistProcessors">
+    <contentAssistProcessor class="de.geolykt.sml0.eclipse.aw.AccesswidenerContentAssistProcessor" contentType="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.genericeditor.autoEditStrategies">
+    <autoEditStrategy class="de.geolykt.sml0.eclipse.aw.AccesswidenerAutoEditStrategy" contentType="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.genericeditor.reconcilers">
+    <reconciler class="de.geolykt.sml0.eclipse.aw.AccesswidenerReconciler" contentType="de.geolykt.sml0.eclipse.aw.accesswidener" />
+  </extension>
+  <extension point="org.eclipse.core.filebuffers.documentSetup">
+    <participant class="de.geolykt.sml0.eclipse.aw.ValidatorDocumentSetupParticipant" contentTypeId="de.geolykt.sml0.eclipse.aw.accesswidener" extensions="accesswidener" />
+  </extension>
+  <extension point="org.eclipse.ui.themes">
+    <themeElementCategory id="de.geolykt.sml0.preferences.colors" label="SML0 Colors">
+      <description>
+        The colors used the SML0
+      </description>
+    </themeElementCategory>
+    <colorDefinition categoryId="de.geolykt.sml0.preferences.colors" id="de.geolykt.sml0.preferences.colors.aw.access" label="Accesswidener Access tag" value="28,113,216">
+      <description>
+        Color used for the access modifier tag in AW files.
+      </description>
+    </colorDefinition>
+    <colorDefinition categoryId="de.geolykt.sml0.preferences.colors" id="de.geolykt.sml0.preferences.colors.aw.scope" label="Accesswidener Scope tag" value="46,196,126">
+      <description>
+        Color used for the scope modifier tag in AW files.
+      </description>
+    </colorDefinition>
+    <colorDefinition categoryId="de.geolykt.sml0.preferences.colors" id="de.geolykt.sml0.preferences.colors.aw.comment" label="Accesswidener comments" value="COLOR_GRAY">
+      <description>
+        Color used for comments in AW files.
+      </description>
+    </colorDefinition>
+    <colorDefinition categoryId="de.geolykt.sml0.preferences.colors" id="de.geolykt.sml0.preferences.colors.aw.header" label="Accesswidener header" value="COLOR_DARK_RED">
+      <description>
+        Color used for the header of AW files.
+      </description>
+    </colorDefinition>
+    <colorDefinition categoryId="de.geolykt.sml0.preferences.colors" id="de.geolykt.sml0.preferences.colors.aw.text" label="Accesswidener text" value="100,100,100">
+      <description>
+        Color used for the the rest of the text in AW files.
+      </description>
+    </colorDefinition>
+  </extension>
+</plugin>
+
